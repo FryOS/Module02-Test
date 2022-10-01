@@ -9,12 +9,18 @@ $white: #ffffff;
 
 html {
   font-size: 10px;
-  
 }
 
-body{
+body {
   font-size: 1.6rem;
   font-family: $font-jost;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .header {
@@ -34,15 +40,13 @@ body{
     gap: 4.8rem;
   }
   &__link {
-    font-size: 1.6rem;
-    color: $green;    
+    color: $green;
     text-decoration: none;
     &:hover {
       color: $orange;
     }
   }
   &__tel {
-    font-size: 1.6rem;
     color: $green;
     font-weight: 500;
     text-decoration: none;
@@ -65,7 +69,6 @@ body{
     &:hover {
       background-color: $green;
       border: 1px solid $green;
-      
     }
   }
   &__counter {
@@ -84,4 +87,52 @@ body{
   height: 3.2rem;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.main {
+  background-image: url(../images/main.png);
+  background-size: cover;
+  background-position-x: center;
+  &__item {
+    margin-left: 12rem;
+    max-width: 378px;
+    margin-top: 6rem;
+  }
+  &__link {
+    margin-top: 6rem;
+  }
+}
+
+.title {
+  font-family: $font-cormorant;
+  font-weight: 700;
+  font-size: 8rem;
+  color: $green;
+  margin: 0;
+  &__span {
+    font-style: italic;
+  }
+  &_block {
+    .title__span {
+      display: block;
+    }
+  }
+}
+
+.description {
+  margin: 0;
+  &_size-s {
+    font-size: 1.8rem;
+  }
+}
+
+.link {
+  color: $white;
+  text-transform: uppercase;
+  padding: 2.5rem 4.2rem;
+  background-color: $orange;
+  box-shadow: 0px 1rem 1.1rem 0.2rem rgba(207, 92, 13, 0.2);
+  text-decoration: none;
+  border-radius: 3.8rem;
+  display: inline-block;
 }
