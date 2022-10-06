@@ -57,8 +57,8 @@ body {
   &__cart {
     display: block;
     background-image: url(../images/cart-black.svg);
-    width: 3.8rem;
-    height: 3.8rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 100%;
     background-color: $orange;
     background-repeat: no-repeat;
@@ -83,18 +83,20 @@ body {
 .logo {
   display: block;
   background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 12rem;
   height: 3.2rem;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .main {
   background-image: url(../images/main.png);
   background-size: cover;
   background-position-x: center;
+  background-repeat: no-repeat;
   position: relative;
   padding-bottom: 187px;
+  z-index: 0;
   &__item {
     margin-left: 12rem;
     max-width: 378px;
@@ -133,6 +135,9 @@ body {
   &__image {
     width: 92%;
   }
+  &__text {
+    padding-top: 4rem;
+  }
   &__btn {
     border: none;
     padding: 0;
@@ -140,12 +145,11 @@ body {
     color: $green;
     text-align: left;
     background-color: transparent;
-    &:hover{
-      .main__btn{
-        &::before{
+    &:hover {
+      .main__btn {
+        &::before {
           background-color: $orange;
           box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
-
         }
       }
     }
@@ -188,46 +192,53 @@ body {
     bottom: 0;
     right: 41rem;
     width: 11rem;
+    z-index: -1;
   }
   &__paper {
     position: absolute;
     bottom: 80rem;
     left: 7rem;
     width: 11rem;
+    z-index: -1;
   }
   &__cucumber {
     position: absolute;
     top: -5.5rem;
     left: 103rem;
     width: 11rem;
+    z-index: -1;
   }
   &__avokado {
     position: absolute;
     top: 5rem;
     right: 20rem;
     width: 25rem;
+    z-index: -1;
   }
   &__beans_1 {
     position: absolute;
     bottom: 24rem;
     left: 4rem;
     width: 7rem;
+    z-index: -1;
   }
   &__beans_2 {
     position: absolute;
     bottom: 21rem;
     left: -3rem;
     width: 7rem;
+    z-index: -1;
   }
   &__beans_3 {
     position: absolute;
     bottom: 16rem;
     left: 7rem;
     width: 7rem;
+    z-index: -1;
   }
-  &__food{
+  &__food {
     display: flex;
-    color: rgba($green, 0.8)
+    color: rgba($green, 0.8);
   }
 }
 
@@ -249,18 +260,60 @@ body {
 
 .description {
   margin: 0;
+  line-height: 1.5;
   &_size-s {
     font-size: 1.8rem;
+  }
+  &_size-m {
+    font-size: 2.4rem;
   }
 }
 
 .link {
   color: $white;
   text-transform: uppercase;
+  letter-spacing: 0.13rem;
   padding: 2.5rem 4.2rem;
   background-color: $orange;
   box-shadow: 0px 1rem 1.1rem 0.2rem rgba(207, 92, 13, 0.2);
   text-decoration: none;
   border-radius: 3.8rem;
   display: inline-block;
+}
+
+.offer {
+  &__slider{
+    overflow: hidden;
+    padding-top: 100px;
+  }
+  background-image: url(../images/offer.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-top: 2rem;
+  padding-bottom: 200px;
+  &__text{
+    margin-top: 6rem;
+    min-width: 700px;
+  }
+}
+
+.swiper{
+  overflow: initial;
+  &-slide{
+    border: 1px solid $green;
+  }
+  &-pagination{
+    display: none;
+  }
+  &-button-next, &-button-prev{
+    top: -60px;
+    &::after{
+      color: $green;
+    }
+  }
+  &-button-prev{
+    left: initial;
+    right: 100px;
+  }
 }
