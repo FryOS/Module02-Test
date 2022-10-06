@@ -135,32 +135,99 @@ body {
   }
   &__btn {
     border: none;
-    background-color: transparent;
     padding: 0;
-    width: 11px;
-    height: 11px;
-    box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
-    border-radius: 100%;
     position: absolute;
+    color: $green;
+    text-align: left;
+    background-color: transparent;
+    &:hover{
+      .main__btn{
+        &::before{
+          background-color: $orange;
+          box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+
+        }
+      }
+    }
+    &::before {
+      content: "";
+      background-color: $green;
+      width: 11px;
+      height: 11px;
+      box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+      border-radius: 100%;
+      position: absolute;
+    }
     &_01 {
-      top: 100px;
-      left: 113px;
+      top: 80px;
+      left: 140px;
+      &::before {
+        top: 12px;
+        left: -22px;
+      }
     }
     &_02 {
-      top: 648px;
-      left: 560px;
+      top: 666px;
+      left: 526px;
+      &::before {
+        top: 12px;
+        left: -22px;
+      }
     }
     &_03 {
-      top: 150px;
-      left: 618px;
+      top: 325px;
+      left: 724px;
+      &::before {
+        top: 12px;
+        left: -22px;
+      }
     }
   }
   &__tomato {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 41rem;
     width: 11rem;
-
+  }
+  &__paper {
+    position: absolute;
+    bottom: 80rem;
+    left: 7rem;
+    width: 11rem;
+  }
+  &__cucumber {
+    position: absolute;
+    top: -5.5rem;
+    left: 103rem;
+    width: 11rem;
+  }
+  &__avokado {
+    position: absolute;
+    top: 5rem;
+    right: 20rem;
+    width: 25rem;
+  }
+  &__beans_1 {
+    position: absolute;
+    bottom: 24rem;
+    left: 4rem;
+    width: 7rem;
+  }
+  &__beans_2 {
+    position: absolute;
+    bottom: 21rem;
+    left: -3rem;
+    width: 7rem;
+  }
+  &__beans_3 {
+    position: absolute;
+    bottom: 16rem;
+    left: 7rem;
+    width: 7rem;
+  }
+  &__food{
+    display: flex;
+    color: rgba($green, 0.8)
   }
 }
 
