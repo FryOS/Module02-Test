@@ -25,7 +25,7 @@ body {
 
 .header {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto 6rem;
   display: flex;
   padding-left: 15px;
   padding-right: 15px;
@@ -93,6 +93,8 @@ body {
   background-image: url(../images/main.png);
   background-size: cover;
   background-position-x: center;
+  position: relative;
+  padding-bottom: 187px;
   &__item {
     margin-left: 12rem;
     max-width: 378px;
@@ -100,6 +102,65 @@ body {
   }
   &__link {
     margin-top: 6rem;
+  }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+  }
+  &__cover {
+    flex-basis: 763px;
+    height: 763px;
+    border: 1px solid rgba($green, 0.4);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__line {
+    width: 658px;
+    height: 658px;
+    border: 1px solid rgba($green, 0.4);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    width: 92%;
+  }
+  &__btn {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    width: 11px;
+    height: 11px;
+    box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+    border-radius: 100%;
+    position: absolute;
+    &_01 {
+      top: 100px;
+      left: 113px;
+    }
+    &_02 {
+      top: 648px;
+      left: 560px;
+    }
+    &_03 {
+      top: 150px;
+      left: 618px;
+    }
+  }
+  &__tomato {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 11rem;
+
   }
 }
 
