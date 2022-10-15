@@ -546,6 +546,9 @@ body {
 .goods {
   padding-top: 2rem;
   padding-bottom: 12.8rem;
+  @media (max-width: $r_tab) {
+    padding-bottom: 4rem;
+  }
   &__text {
     margin-top: 6rem;
     min-width: 700px;
@@ -562,7 +565,7 @@ body {
       grid-template-columns: 1fr 1fr;
     }
     @media (max-width: $r_tab) {
-      
+      gap: 10px;
     }
   }
   &__btn {
@@ -828,12 +831,17 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-top: 7rem;
+    @media (max-width: $r_tab) {
+      flex-direction: column;
+      flex-basis: auto;
+    }
   }
   &__text {
     flex-basis: 620px;
     margin-left: 12rem;
     @media (max-width: $r_desk_1280) {
       margin-left: 8rem;
+      flex-basis: auto;
     }
     @media (max-width: $r_desk_1120) {
       margin-left: 4rem;
@@ -860,6 +868,7 @@ body {
     @media (max-width: $r_tab) {
       gap: 3rem;
       font-size: 2rem;
+      margin-top: 1rem;
     }
   }
   &__item {
@@ -908,6 +917,9 @@ body {
   gap: 2rem;
   @media (max-width: $r_tab) {
     flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.4rem;
+    gap: 1rem;
   }
   &__item {
     flex-basis: 230px;
@@ -978,12 +990,18 @@ body {
 }
 
 .contact {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  @media (max-width: $r_tab) {
+    padding-top: 4rem;
+  }
   &-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: $r_tab) {
+      flex-direction: column;
+    }
     &__text {
       max-width: 400px;
       flex-grow: 1;
@@ -1047,10 +1065,18 @@ body {
     justify-content: space-between;
     margin-top: 7rem;
     gap: 12rem;
+    @media (max-width: $r_tab) {
+      flex-direction: column;
+      gap: 0;
+    }
   }
   &__text {
     flex-basis: 620px;
     margin-left: 12rem;
+    @media (max-width: $r_tab) {
+      flex-basis: auto;
+      margin-left: 0;
+    }
   }
   &__link {
     color: $green;
@@ -1075,9 +1101,16 @@ body {
     margin: 0;
     padding-left: 0;
     gap: 9rem;
+    @media (max-width: $r_tab) {
+      justify-content: center;
+    }
   }
   &__payments {
     flex-basis: 620px;
+    @media (max-width: $r_tab) {
+      flex-basis: auto;
+      margin-left: 0;
+    }
   }
   &__item {
     display: flex;
@@ -1138,12 +1171,19 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-size: 1.8rem;
+    @media (max-width: $r_tab) {
+      flex-direction: column;
+    }
   }
   &__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-basis: 66.5%;
+    @media (max-width: $r_tab) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
   &__text {
     display: flex;
@@ -1153,11 +1193,19 @@ footer {
     font-size: 1.6rem;
     color: rgba($green, 0.6);
     margin-top: 4rem;
+    @media (max-width: $r_tab) {
+      flex-direction: column;
+    }
   }
   &__list {
     font-family: $font-cormorant;
     font-size: 1.8rem;
     list-style-type: none;
+    @media (max-width: $r_tab) {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
   }
   &__item {
     margin-bottom: 2.6rem;
@@ -1206,6 +1254,9 @@ footer {
     padding-left: 0;
     margin-top: 3rem;
     margin-bottom: 0;
+    @media (max-width: $r_tab) {
+      justify-content: space-evenly;
+    }
     &__link {
       display: block;
       width: 4.6rem;
