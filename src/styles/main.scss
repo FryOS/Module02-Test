@@ -23,6 +23,9 @@ $r_desk_full_1750: 1750px;
 
 html {
   font-size: 10px;
+  @media (max-width: $r_mob_500) {
+    font-size: 8px;
+  }
 }
 
 body {
@@ -118,6 +121,11 @@ body {
       border: 1px solid $green;
       opacity: 0.8;
     }
+    @media (max-width: $r_mob_500) {
+      width: 4.5rem;
+      height: 4.5rem;
+      background-size: 2rem;
+    }
     &:hover {
       background-color: $green;
       border: 1px solid $green;
@@ -135,6 +143,9 @@ body {
     top: 0.6rem;
     @media (max-width: $r_desk_hd) {
       color: $green;
+    }
+    @media (max-width: $r_mob_500) {
+      font-size: 1rem;
     }
   }
   &__menu,
@@ -161,11 +172,19 @@ body {
     &:hover {
       opacity: 1;
     }
+    @media (max-width: $r_mob_500) {
+      width: 4.5rem;
+      height: 4.5rem;
+      background-size: 2rem;
+    }
   }
   &__buttons {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    @media (max-width: $r_mob_500) {
+      gap: 1.4rem;
+    }
   }
   &__menu {
     @media (max-width: $r_tab_900) {
@@ -183,6 +202,11 @@ body {
       padding: 0;
       opacity: 0.8;
       transition: 0.2s;
+    }
+    @media (max-width: $r_mob_500) {
+      width: 4.5rem;
+      height: 4.5rem;
+      background-size: 2rem;
     }
   }
 }
@@ -239,6 +263,9 @@ body {
     margin-top: 6rem;
     @media (max-width: $r_tab) {
       text-align: center;
+    }
+    @media (max-width: $r_mob_500) {
+      margin-top: 3.3rem;
     }
   }
   &__flex {
@@ -309,6 +336,9 @@ body {
       max-width: 300px;
       margin: 0 auto;
       margin-top: 3rem;
+    }
+    @media (max-width: $r_mob_500) {
+      min-width: 220px;
     }
   }
   &__text {
@@ -387,9 +417,15 @@ body {
   &__tomato {
     position: absolute;
     bottom: 0;
-    right: 41rem;
+    right: 0rem;
     width: 11rem;
     z-index: -1;
+    @media (max-width: $r_mob_500) {
+      bottom: inherit;
+      top: 82px;
+      right: inherit;
+      left: -13px;
+    }
   }
   &__paper {
     position: absolute;
@@ -400,6 +436,10 @@ body {
     @media (max-width: $r_desk_full_1750) {
       display: none;
     }
+    @media (max-width: $r_mob_500) {
+      top: 80rem;
+      left: 7rem;
+    }
   }
   &__cucumber {
     position: absolute;
@@ -407,6 +447,12 @@ body {
     left: 103rem;
     width: 11rem;
     z-index: -1;
+    @media (max-width: $r_mob_500) {
+      width: 9.8rem;
+      width: 9.8rem;
+      top: 120px;
+      right: -5rem;
+    }
   }
   &__avokado {
     position: absolute;
@@ -416,7 +462,9 @@ body {
     z-index: -1;
     @media (max-width: $r_desk_full_1750) {
       width: 9.8rem;
+      width: 9.8rem;
       top: 120px;
+      right: -5rem;
     }
   }
   &__beans_1 {
@@ -425,6 +473,9 @@ body {
     left: 4rem;
     width: 7rem;
     z-index: -1;
+    @media (max-width: $r_mob_500) {
+      display: none;
+    }
   }
   &__beans_2 {
     position: absolute;
@@ -432,6 +483,9 @@ body {
     left: -3rem;
     width: 7rem;
     z-index: -1;
+    @media (max-width: $r_mob_500) {
+      display: none;
+    }
   }
   &__beans_3 {
     position: absolute;
@@ -439,6 +493,9 @@ body {
     left: 7rem;
     width: 7rem;
     z-index: -1;
+    @media (max-width: $r_mob_500) {
+      display: none;
+    }
   }
   &__food {
     display: flex;
@@ -605,6 +662,10 @@ body {
     padding-top: 5.4rem;
     padding-bottom: 6rem;
   }
+  @media (max-width: $r_mob_500) {
+    max-width: 210px;
+    padding-bottom: 7rem;
+  }
 }
 
 .swiper {
@@ -631,10 +692,18 @@ body {
       @media (max-width: $r_desk_hd) {
         height: 400px;
       }
+      @media (max-width: $r_mob_500) {
+        height: 240px;
+        text-align: center;
+        padding: 2.2rem 1.7rem;
+      }
       &:hover {
         .swiper-slide__hover {
           height: 233px;
           opacity: 1;
+          @media (max-width: $r_mob_500) {
+            height: auto;
+          }
         }
         &::after {
           content: "";
@@ -689,10 +758,19 @@ body {
       @media (max-width: $r_tab) {
         font-size: 2rem;
       }
+      @media (max-width: $r_mob_500) {
+        font-size: 1.75rem;
+        margin-top: 0;
+        margin-bottom: 3rem;
+      }
     }
     &__hover {
       height: 0;
       opacity: 0;
+      @media (max-width: $r_mob_500) {
+        height: auto;
+        opacity: 1;
+      }
     }
     &__text {
       color: rgba($green, 0.7);
@@ -700,6 +778,9 @@ body {
       margin-top: 2.5rem;
       margin-bottom: 3.4rem;
       min-width: 1rem;
+      @media (max-width: $r_mob_500) {
+        display: none;
+      }
     }
     &__link {
       text-transform: uppercase;
@@ -711,6 +792,11 @@ body {
       gap: 2rem;
       letter-spacing: 0.1rem;
       opacity: 0.8;
+      @media (max-width: $r_mob_500) {
+        font-size: 1.25;
+        justify-content: center;
+        gap: 9px;
+      }
       &:hover {
         opacity: 1;
       }
@@ -722,6 +808,10 @@ body {
         background-image: url(../images/plus.svg);
         background-size: cover;
         background-repeat: no-repeat;
+        @media (max-width: $r_mob_500) {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
       }
     }
     &__cover {
@@ -994,6 +1084,7 @@ body {
   padding-bottom: 10rem;
   @media (max-width: $r_tab) {
     padding-top: 4rem;
+    padding-bottom: 8rem;
   }
   &-box {
     display: flex;
