@@ -55,3 +55,12 @@ var swiper = new Swiper(".trendsSwiper", {
   },
   modules: [Navigation, Pagination],
 });
+
+// function openModal(){
+//   document.getElementById("dropdown").style.display = "block";
+// }
+
+// function closeModal(){
+//   document.getElementById("dropdown").style.display = "-400px";
+// }
+
